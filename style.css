@@ -843,6 +843,12 @@ footer {
     position: relative;
     text-align: left;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.autor-depoimento {
+    margin-top: auto; 
 }
 
 .aspas {
@@ -883,4 +889,26 @@ footer {
     .campanha-box h3 {
         font-size: 1.6rem;
     }
+}
+
+/* =========================================
+   RODAPÉ E CRÉDITOS
+   ========================================= */
+footer .creditos-dev {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #999; /* Um cinza um pouco mais apagado para não ofuscar o texto principal */
+}
+
+footer .creditos-dev a {
+    color: var(--cor-secundaria); /* Usa o Dourado do clube no seu nome */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* O efeito ao passar o mouse por cima do seu nome */
+footer .creditos-dev a:hover {
+    color: var(--cor-branco); /* Fica branco e sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
