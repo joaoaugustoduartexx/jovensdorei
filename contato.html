@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Jovens do Rei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo-clube.png" alt="Logo Jovens do Rei" style="height: 50px;">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="atividades.html">Atividades</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="apoio.html">Apoio</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="pagina-header">
+        <h2>Fale Conosco</h2>
+        <p>Quer ser um desbravador ou tirar alguma dúvida? Mande uma mensagem para a nossa diretoria!</p>
+    </section>
+
+    <section class="contato-container">
+        <div class="contato-grid">
+            
+            <div class="formulario-box">
+                <h3>Envie uma Mensagem</h3>
+                <form onsubmit="enviarParaWhatsApp(event)">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefone">WhatsApp (DDD + Número)</label>
+                        <input type="tel" id="telefone" placeholder="Ex: 11999999999" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="comoConheceu">Como conheceu o Clube?</label>
+                        <select id="comoConheceu" required>
+                            <option value="" disabled selected>Selecione uma opção...</option>
+                            <option value="Indicação de amigo/parente">Indicação de amigo/parente</option>
+                            <option value="Igreja local">Igreja local</option>
+                            <option value="Instagram/Redes Sociais">Instagram / Redes Sociais</option>
+                            <option value="Eventos na comunidade">Eventos na comunidade</option>
+                            <option value="Pesquisa na internet">Pesquisa na internet</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-block">Chamar no WhatsApp</button>
+                </form>
+            </div>
+
+            <div class="info-box">
+                <h3>Onde Estamos</h3>
+                <p>Nossas reuniões regulares acontecem todos os domingos no endereço abaixo.</p>
+                
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0881574416244!2d-47.1900117!3d-22.910118999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b9bead0992a3%3A0x6d6c467c4d216cc5!2sR.%20H%C3%A9lio%20Marcelino%2C%2060%20-%20Jardim%20Santa%20Esmeralda%2C%20Hortol%C3%A2ndia%20-%20SP%2C%2013186-535!5e0!3m2!1spt-BR!2sbr!4v1773408658877!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <h3>Nossas Redes</h3>
+                <p>Acompanhe nosso dia a dia e veja nossos stories!</p>
+                <button class="btn-instagram" onclick="window.open('https://instagram.com/clubejovensdorei', '_blank')">
+                    📷 Siga nosso Instagram
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Clube de Desbravadores Jovens do Rei. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

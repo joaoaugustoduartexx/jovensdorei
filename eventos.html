@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e Agenda - Jovens do Rei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo-clube.png" alt="Logo Jovens do Rei" style="height: 50px;">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="atividades.html">Atividades</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="apoio.html">Apoio</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="pagina-header">
+        <h2>Nossa Agenda</h2>
+        <p>Fique por dentro de todas as nossas reuniões, camporis, acampamentos e saídas.</p>
+    </section>
+
+<section class="calendario-section">
+    <div class="calendario-instrucoes">
+        <h3>Como usar nossa agenda:</h3>
+        <p>Navegue pelos meses utilizando as setas. Os dias marcados contêm atividades programadas. <strong>Clique em cima do evento</strong> para ver os detalhes, como horário de início, local de encontro e o que levar!</p>
+    </div>
+
+    <style>
+        .calendario-responsivo {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 3px solid #D4AF37; /* Borda dourada */
+            background-color: #FFFFFF;
+        }
+        .cal-pc {
+            display: block !important;
+            width: 100% !important;
+            height: 600px !important;
+        }
+        .cal-celular {
+            display: none !important; /* Esconde no PC na marra */
+        }
+        
+        /* Regra para telas menores que 768px (Celulares) */
+        @media (max-width: 768px) {
+            .cal-pc {
+                display: none !important; /* Esconde a grade no celular na marra */
+            }
+            .cal-celular {
+                display: block !important; /* Mostra a lista no celular na marra */
+                width: 100% !important;
+                height: 450px !important;
+            }
+        }
+    </style>
+
+    <div class="calendario-responsivo">
+        
+        <iframe class="cal-pc" src="https://calendar.google.com/calendar/embed?src=jovensdorei.clube%40gmail.com&ctz=America%2FSao_Paulo" frameborder="0" scrolling="no"></iframe>
+        
+        <iframe class="cal-celular" src="https://calendar.google.com/calendar/embed?src=jovensdorei.clube%40gmail.com&ctz=America%2FSao_Paulo" frameborder="0" scrolling="no"></iframe>
+        
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2026 Clube de Desbravadores Jovens do Rei. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

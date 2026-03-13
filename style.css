@@ -1,0 +1,784 @@
+/* =========================================
+   VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+/* =========================================
+   VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+:root {
+    --cor-principal: #5B1A2A; /* Vinho */
+    --cor-secundaria: #D4AF37; /* Dourado */
+    --cor-escura: #111111; /* Preto para detalhes */
+    --cor-fundo: #F4F4F9;
+    --cor-texto: #333333;
+    --cor-branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 👇 ESSA É A TRAVA NOVA QUE ADICIONAMOS AQUI 👇 */
+html, body {
+    overflow-x: hidden; /* Corta tudo que tentar vazar para os lados */
+    width: 100%;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--cor-secundaria);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--cor-secundaria);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   PÁGINA INÍCIO (INDEX)
+   ========================================= */
+.hero-section {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Botões Globais */
+.btn {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-escura);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #b5952f;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Seções de Resumo (Início) */
+.resumo-atividades, .resumo-eventos {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%; /* Substituiu o 300px fixo */
+    max-width: 300px; 
+    border-top: 4px solid var(--cor-secundaria);
+}
+
+.resumo-eventos ul {
+    list-style: none;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+.resumo-eventos li {
+    background: var(--cor-branco);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--cor-principal);
+}
+
+/* =========================================
+   PÁGINA SOBRE NÓS
+   ========================================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.historia-section {
+    background-color: var(--cor-branco);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-missao {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1;
+    width: 100%;
+    min-width: 250px; /* Reduzido de 300px para não estourar */
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+/* Cards da Equipe */
+.equipe-section {
+    padding: 3rem 5%;
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+.cards-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: stretch; /* Isso faz todos os cards terem a mesma altura na linha */
+}
+
+.card-membro {
+    background: var(--cor-branco);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 100%; /* Substituiu o 280px fixo */
+    max-width: 280px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--cor-escura);
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+}
+
+.card-membro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem auto; /* Centraliza a imagem horizontalmente */
+    border: 3px solid var(--cor-secundaria);
+}
+
+.btn-whatsapp {
+    margin-top: auto; /* EMPURRA O BOTÃO PARA O FINAL DO CARD */
+    display: block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+.parcerias-section {
+    background-color: var(--cor-branco);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+/* =========================================
+   RODAPÉ E RESPONSIVIDADE
+   ========================================= */
+footer {
+    background-color: var(--cor-escura);
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    /* Menu lateral que desliza da DIREITA */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Esconde o menu fora da tela do lado direito */
+        width: 250px; /* Largura da gaveta */
+        height: 100vh; /* Altura total da tela */
+        background-color: var(--cor-principal);
+        flex-direction: column;
+        justify-content: center; /* Centraliza os links no meio da tela */
+        align-items: center;
+        transition: right 0.4s ease-in-out; /* Animação suave */
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5); /* Sombra legal */
+        border-left: 3px solid var(--cor-secundaria);
+    }
+
+    /* A mágica do JS ativando o menu */
+    .nav-links.active {
+        right: 0; /* Traz o menu para dentro da tela */
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0; /* Espaço maior para o toque de dedo */
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1000; /* Garante que o botão hambúrguer fique por cima do menu para fechar */
+        font-size: 2rem;
+    }
+
+    /* Ajuste extra: Reduz os textos gigantes na tela inicial */
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   PÁGINA DE ATIVIDADES
+   ========================================= */
+
+/* Cabeçalho interno para as páginas secundárias */
+.pagina-header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.pagina-header h2 {
+    font-size: 2.2rem;
+    color: var(--cor-secundaria);
+}
+
+.atividades-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.atividade-bloco {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--cor-secundaria);
+}
+
+/* Classe para inverter a ordem (Imagem na direita, texto na esquerda) */
+.atividade-bloco.invertido {
+    flex-direction: row-reverse;
+    border-left: none;
+    border-right: 5px solid var(--cor-secundaria);
+}
+
+.atividade-imagem {
+    flex: 1;
+    min-width: 300px;
+}
+
+.atividade-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.atividade-texto {
+    flex: 1;
+    padding: 2rem;
+}
+
+.atividade-texto h3 {
+    color: var(--cor-principal);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.atividade-texto p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Responsividade da Página de Atividades */
+@media (max-width: 800px) {
+    .atividade-bloco, .atividade-bloco.invertido {
+        flex-direction: column;
+        border-left: 5px solid var(--cor-secundaria);
+        border-right: none;
+    }
+    
+    .atividade-imagem {
+        width: 100%;
+    }
+    
+    .atividade-imagem img {
+        height: 250px; /* Um pouco menor no celular */
+    }
+}
+
+/* =========================================
+   PÁGINA DE GALERIA
+   ========================================= */
+
+.galeria-amostra {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Sistema de Grade para as fotos */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduzido de 300px para caber no celular */
+    gap: 1.5rem;
+}
+
+.foto-item {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid var(--cor-principal);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Animação suave */
+}
+
+/* Efeito de Zoom ao passar o mouse */
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Seção do Botão do Drive */
+.drive-section {
+    background-color: var(--cor-branco);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 5px solid var(--cor-secundaria);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.drive-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.drive-content h3 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.drive-content p {
+    color: var(--cor-texto);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.drive-content .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   PÁGINA DE EVENTOS E AGENDA
+   ========================================= */
+.calendario-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.calendario-instrucoes {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    border-top: 4px solid var(--cor-secundaria);
+    text-align: left;
+}
+
+.calendario-instrucoes h3 {
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+}
+
+.calendario-instrucoes p {
+    color: var(--cor-texto);
+    font-size: 1.05rem;
+}
+
+/* Container do Calendário Novo (Para ser responsivo e alternar visualização) */
+.calendario-responsivo {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 3px solid var(--cor-secundaria); /* Borda dourada do clube */
+    background-color: var(--cor-branco);
+}
+
+/* Versão PC: Mostra grade mensal, esconde versão celular */
+.cal-pc {
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+
+.cal-celular {
+    display: none;
+}
+
+/* Ajuste de visualização para celulares */
+@media (max-width: 768px) {
+    .cal-pc {
+        display: none; /* Esconde o calendário em grade espremido */
+    }
+    
+    .cal-celular {
+        display: block; /* Mostra o calendário em formato de lista/agenda */
+        width: 100%;
+        height: 450px;
+    }
+}
+/* =========================================
+   PÁGINA DE CONTATO
+   ========================================= */
+
+.contato-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Estilos do Formulário */
+.formulario-box, .info-box {
+    background-color: var(--cor-branco);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--cor-principal);
+}
+
+.formulario-box h3, .info-box h3 {
+    color: var(--cor-principal);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--cor-texto);
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: #fafafa;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Sombra dourada */
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+/* Informações e Mapa */
+.info-box p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.mapa-container {
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* Botão do Instagram */
+.btn-instagram {
+    display: block;
+    width: 100%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--cor-branco);
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-instagram:hover {
+    opacity: 0.85;
+}
+
+/* Responsividade do Contato */
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr; /* Coloca uma coluna debaixo da outra no celular */
+        gap: 2rem;
+    }
+}
+
+/* =========================================
+   PÁGINA DE APOIO (DOAÇÕES E DEPOIMENTOS)
+   ========================================= */
+
+/* Área de Doação / Campanha */
+.doacao-section {
+    padding: 4rem 2rem;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+}
+
+.campanha-box {
+    background-color: var(--cor-branco);
+    max-width: 800px;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    position: relative;
+    border: 3px solid var(--cor-secundaria);
+}
+
+.tag-campanha {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.campanha-box h3 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.campanha-box p {
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.pix-area {
+    background-color: rgba(212, 175, 55, 0.1); /* Fundo dourado bem clarinho */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px dashed var(--cor-secundaria);
+}
+
+.pix-area h4 {
+    color: var(--cor-escura);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.btn-pix {
+    background-color: #32BCAD; /* Cor que remete a dinheiro/transferência, mas suave */
+    color: var(--cor-branco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-pix:hover {
+    background-color: #269185;
+}
+
+/* Área de Depoimentos */
+.depoimentos-section {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.depoimentos-section .subtitulo {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-depoimento {
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    padding: 2.5rem;
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.aspas {
+    font-size: 4rem;
+    color: var(--cor-secundaria);
+    font-family: Georgia, serif;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    opacity: 0.3;
+}
+
+.texto-depoimento {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1; /* Mantém o texto em cima das aspas */
+}
+
+.autor-depoimento strong {
+    display: block;
+    color: var(--cor-principal);
+    font-size: 1.1rem;
+}
+
+.autor-depoimento span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .campanha-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .campanha-box h3 {
+        font-size: 1.6rem;
+    }
+}

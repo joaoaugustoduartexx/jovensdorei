@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Meu site</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Desbravadores Jovens do Rei</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Meu primeiro site na Cloudflare 🚀</h1>
+    <header>
+        <div class="logo">
+            <img src="assets/logo-clube.png" alt="Logo Jovens do Rei" style="height: 50px;">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="atividades.html">Atividades</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="apoio.html">Apoio</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
 
-<script src="script.js"></script>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>A Aventura Começa Aqui!</h2>
+            <p>Descubra o que é ser um Desbravador. Informações globais e a força do Clube Jovens do Rei em nossa região.</p>
+            <a href="sobre.html" class="btn">Conheça nossa história</a>
+        </div>
+    </section>
+
+    <section class="resumo-atividades">
+        <h2>Cronograma Semanal</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Reunião Regular</h3>
+                <p>Todos os domingos às 09h00.</p>
+                <p>Instruções, ordem unida, especialidades e muita diversão!</p>
+            </div>
+            <div class="card">
+                <h3>Classe Bíblica</h3>
+                <p>Sábados às 17h00.</p>
+                <p>Momento de crescimento espiritual e comunhão.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="resumo-eventos">
+        <h2>Fique Atento: Próximos Eventos</h2>
+        <ul>
+            <li><strong>Curso de conselheiros e capitães:</strong> 22 de Março</li>
+            <li><strong>Entrega das Batatas Recheadas:</strong> 22 de Março</li>
+        </ul>
+        <a href="eventos.html" class="btn-secondary">Ver Calendário Completo</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Clube de Desbravadores Jovens do Rei. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
