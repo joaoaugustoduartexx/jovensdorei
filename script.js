@@ -67,7 +67,7 @@ function copiarPix() {
     
     // API moderna para copiar texto para a área de transferência
     navigator.clipboard.writeText(chavePix).then(() => {
-        alert("Chave PIX copiada com sucesso! Obrigado pelo seu apoio.");
+        alert("Chave PIX copiada com sucesso! Que Deus abençoe seu coração.");
     }).catch(err => {
         // Caso o navegador bloqueie a cópia
         alert("Erro ao copiar. Por favor, copie a chave manualmente: " + chavePix);
