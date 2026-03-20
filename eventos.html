@@ -52,7 +52,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border: 3px solid #D4AF37; /* Borda dourada */
+            border: 3px solid #D4AF37;
             background-color: #FFFFFF;
         }
         .cal-pc {
@@ -61,16 +61,14 @@
             height: 600px !important;
         }
         .cal-celular {
-            display: none !important; /* Esconde no PC na marra */
+            display: none !important;
         }
-        
-        /* Regra para telas menores que 768px (Celulares) */
         @media (max-width: 768px) {
             .cal-pc {
-                display: none !important; /* Esconde a grade no celular na marra */
+                display: none !important;
             }
             .cal-celular {
-                display: block !important; /* Mostra a lista no celular na marra */
+                display: block !important;
                 width: 100% !important;
                 height: 450px !important;
             }

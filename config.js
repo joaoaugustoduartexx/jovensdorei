@@ -1,4 +1,5 @@
-// config.js
+// NÃO MEXA NESTE ARQUIVO SEM AUTORIZAÇÃO
+
 const CONFIG = {
     whatsappClube: "5519983484323",
     linkDriveGaleria: "https://drive.google.com/drive/folders/seu-link-aqui",

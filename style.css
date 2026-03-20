@@ -1,13 +1,7 @@
-/* =========================================
-   VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS
-   ========================================= */
-/* =========================================
-   VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS
-   ========================================= */
 :root {
-    --cor-principal: #5B1A2A; /* Vinho */
-    --cor-secundaria: #D4AF37; /* Dourado */
-    --cor-escura: #111111; /* Preto para detalhes */
+    --cor-principal: #5B1A2A; 
+    --cor-secundaria: #D4AF37;
+    --cor-escura: #111111; 
     --cor-fundo: #F4F4F9;
     --cor-texto: #333333;
     --cor-branco: #FFFFFF;
@@ -20,9 +14,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 👇 ESSA É A TRAVA NOVA QUE ADICIONAMOS AQUI 👇 */
 html, body {
-    overflow-x: hidden; /* Corta tudo que tentar vazar para os lados */
+    overflow-x: hidden; 
     width: 100%;
 }
 
@@ -31,9 +24,7 @@ body {
     color: var(--cor-texto);
     line-height: 1.6;
 }
-/* =========================================
-   CABEÇALHO E NAVEGAÇÃO
-   ========================================= */
+
 header {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
@@ -70,9 +61,6 @@ header {
     cursor: pointer;
 }
 
-/* =========================================
-   PÁGINA INÍCIO (INDEX)
-   ========================================= */
 .hero-section {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
@@ -86,7 +74,6 @@ header {
     margin-bottom: 1rem;
 }
 
-/* Botões Globais */
 .btn {
     display: inline-block;
     background-color: var(--cor-secundaria);
@@ -115,10 +102,6 @@ header {
     margin-top: 1rem;
 }
 
-/* Seções de Resumo (Início) */
-/* =========================================
-   PAINEL PRINCIPAL (CRONOGRAMA E EVENTOS)
-   ========================================= */
 .painel-principal {
     display: flex;
     flex-wrap: wrap;
@@ -126,12 +109,12 @@ header {
     padding: 4rem 5%;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: flex-start; /* Alinha os blocos pelo topo */
+    align-items: flex-start;
 }
 
 .coluna-esq, .coluna-dir {
-    flex: 1; /* Divide o espaço igualmente */
-    min-width: 300px; /* Impede que fique espremido no celular */
+    flex: 1;
+    min-width: 300px;
     width: 100%;
 }
 
@@ -145,15 +128,13 @@ header {
     margin-bottom: 1.5rem;
 }
 
-/* --- Estilo dos Cards do Cronograma --- */
 .cards-coluna {
     display: flex;
-    flex-direction: column; /* Coloca um card em cima do outro */
+    flex-direction: column;
     gap: 1.5rem;
     align-items: center;
 }
 
-/* Visual Base do Card (para não perder a cor e a sombra) */
 .card {
     background: var(--cor-branco);
     padding: 2rem;
@@ -164,11 +145,10 @@ header {
 
 .cards-coluna .card {
     width: 100%;
-    max-width: 400px; /* Limite perfeito para a metade da tela */
+    max-width: 400px; 
     margin: 0; 
 }
 
-/* --- Estilo da Lista de Eventos --- */
 .lista-eventos {
     list-style: none;
     margin: 0 auto 2rem auto;
@@ -182,12 +162,9 @@ header {
     margin-bottom: 1rem;
     border-radius: 5px;
     border-left: 4px solid var(--cor-principal);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.05); /* Sombra suave adicionada */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
 }
 
-/* =========================================
-   PREVIEW DA GALERIA (PÁGINA INÍCIO)
-   ========================================= */
 .galeria-preview {
     padding: 4rem 5%;
     text-align: center;
@@ -208,7 +185,7 @@ header {
 
 .preview-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cria exatamente 4 colunas iguais no PC */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto 2rem auto;
@@ -216,7 +193,7 @@ header {
 
 .foto-preview {
     width: 100%;
-    height: 180px; /* Altura fixa para todas as fotos ficarem alinhadas */
+    height: 180px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -226,39 +203,34 @@ header {
 .foto-preview img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Impede a imagem de distorcer */
-    transition: transform 0.3s ease; /* Prepara o efeito de zoom */
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Efeito legal de dar um zoom na foto ao passar o mouse */
 .foto-preview:hover img {
     transform: scale(1.1);
 }
 
-/* RESPONSIVIDADE DO PREVIEW (Para Celular) */
 @media (max-width: 768px) {
     .preview-grid {
-        grid-template-columns: repeat(2, 1fr); /* Passa para 2 colunas no celular */
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
     .foto-preview {
-        height: 120px; /* Fica um pouquinho menor no celular para encaixar bem */
+        height: 120px;
     }
 }
 
-/* RESPONSIVIDADE DO PREVIEW (Para Celular) */
 @media (max-width: 768px) {
     .preview-grid {
-        grid-template-columns: repeat(2, 1fr); /* Passa para 2 colunas no celular */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 1rem;
     }
     .foto-preview {
-        height: 120px; /* Fica um pouquinho menor no celular para encaixar bem */
+        height: 120px; 
     }
 }
-/* =========================================
-   PÁGINA SOBRE NÓS
-   ========================================= */
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -285,11 +257,10 @@ header {
     border-radius: 8px;
     flex: 1;
     width: 100%;
-    min-width: 250px; /* Reduzido de 300px para não estourar */
+    min-width: 250px;
     border-bottom: 5px solid var(--cor-secundaria);
 }
 
-/* Cards da Equipe */
 .equipe-section {
     padding: 3rem 5%;
     background-color: var(--cor-fundo);
@@ -302,14 +273,14 @@ header {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    align-items: stretch; /* Isso faz todos os cards terem a mesma altura na linha */
+    align-items: stretch;
 }
 
 .card-membro {
     background: var(--cor-branco);
     border-radius: 10px;
     padding: 1.5rem;
-    width: 100%; /* Substituiu o 280px fixo */
+    width: 100%;
     max-width: 280px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-top: 4px solid var(--cor-escura);
@@ -323,12 +294,12 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 1rem auto; /* Centraliza a imagem horizontalmente */
+    margin: 0 auto 1rem auto; 
     border: 3px solid var(--cor-secundaria);
 }
 
 .btn-whatsapp {
-    margin-top: auto; /* EMPURRA O BOTÃO PARA O FINAL DO CARD */
+    margin-top: auto; 
     display: block;
     background-color: #25D366;
     color: white;
@@ -348,9 +319,6 @@ header {
     padding: 3rem 2rem;
 }
 
-/* =========================================
-   RODAPÉ E RESPONSIVIDADE
-   ========================================= */
 footer {
     background-color: var(--cor-escura);
     color: #ccc;
@@ -360,50 +328,43 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Menu lateral que desliza da DIREITA */
+
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Esconde o menu fora da tela do lado direito */
-        width: 250px; /* Largura da gaveta */
-        height: 100vh; /* Altura total da tela */
+        right: -100%;
+        width: 250px; 
+        height: 100vh; 
         background-color: var(--cor-principal);
         flex-direction: column;
-        justify-content: center; /* Centraliza os links no meio da tela */
+        justify-content: center; 
         align-items: center;
-        transition: right 0.4s ease-in-out; /* Animação suave */
+        transition: right 0.4s ease-in-out;
         z-index: 999;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5); /* Sombra legal */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
         border-left: 3px solid var(--cor-secundaria);
     }
 
-    /* A mágica do JS ativando o menu */
     .nav-links.active {
-        right: 0; /* Traz o menu para dentro da tela */
+        right: 0;
     }
 
     .nav-links li {
-        margin: 1.5rem 0; /* Espaço maior para o toque de dedo */
+        margin: 1.5rem 0; 
     }
 
     .menu-toggle {
         display: block;
         position: relative;
-        z-index: 1000; /* Garante que o botão hambúrguer fique por cima do menu para fechar */
+        z-index: 1000; 
         font-size: 2rem;
     }
 
-    /* Ajuste extra: Reduz os textos gigantes na tela inicial */
     .hero-section h2 {
         font-size: 2rem;
     }
 }
 
-/* =========================================
-   PÁGINA DE ATIVIDADES
-   ========================================= */
-
-/* Cabeçalho interno para as páginas secundárias */
 .pagina-header {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
@@ -435,7 +396,6 @@ footer {
     border-left: 5px solid var(--cor-secundaria);
 }
 
-/* Classe para inverter a ordem (Imagem na direita, texto na esquerda) */
 .atividade-bloco.invertido {
     flex-direction: row-reverse;
     border-left: none;
@@ -471,7 +431,6 @@ footer {
     font-size: 1.05rem;
 }
 
-/* Responsividade da Página de Atividades */
 @media (max-width: 800px) {
     .atividade-bloco, .atividade-bloco.invertido {
         flex-direction: column;
@@ -484,13 +443,9 @@ footer {
     }
     
     .atividade-imagem img {
-        height: 250px; /* Um pouco menor no celular */
+        height: 250px; 
     }
 }
-
-/* =========================================
-   PÁGINA DE GALERIA
-   ========================================= */
 
 .galeria-amostra {
     max-width: 1200px;
@@ -498,11 +453,9 @@ footer {
     padding: 0 2rem;
 }
 
-/* Sistema de Grade para as fotos */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduzido de 300px para caber no celular */
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .foto-item {
@@ -518,15 +471,13 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease; /* Animação suave */
+    transition: transform 0.4s ease;
 }
 
-/* Efeito de Zoom ao passar o mouse */
 .foto-item:hover img {
     transform: scale(1.1);
 }
 
-/* Seção do Botão do Drive */
 .drive-section {
     background-color: var(--cor-branco);
     text-align: center;
@@ -559,9 +510,6 @@ footer {
     cursor: pointer;
 }
 
-/* =========================================
-   PÁGINA DE EVENTOS E AGENDA
-   ========================================= */
 .calendario-section {
     max-width: 1000px;
     margin: 4rem auto;
@@ -589,7 +537,6 @@ footer {
     font-size: 1.05rem;
 }
 
-/* Container do Calendário Novo (Para ser responsivo e alternar visualização) */
 .calendario-responsivo {
     width: 100%;
     max-width: 900px;
@@ -597,11 +544,10 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    border: 3px solid var(--cor-secundaria); /* Borda dourada do clube */
+    border: 3px solid var(--cor-secundaria);
     background-color: var(--cor-branco);
 }
 
-/* Versão PC: Mostra grade mensal, esconde versão celular */
 .cal-pc {
     display: block;
     width: 100%;
@@ -612,21 +558,17 @@ footer {
     display: none;
 }
 
-/* Ajuste de visualização para celulares */
 @media (max-width: 768px) {
     .cal-pc {
-        display: none; /* Esconde o calendário em grade espremido */
+        display: none;
     }
     
     .cal-celular {
-        display: block; /* Mostra o calendário em formato de lista/agenda */
+        display: block;
         width: 100%;
         height: 450px;
     }
 }
-/* =========================================
-   PÁGINA DE CONTATO
-   ========================================= */
 
 .contato-container {
     max-width: 1000px;
@@ -640,7 +582,6 @@ footer {
     gap: 3rem;
 }
 
-/* Estilos do Formulário */
 .formulario-box, .info-box {
     background-color: var(--cor-branco);
     padding: 2.5rem;
@@ -680,7 +621,7 @@ footer {
 .input-group input:focus, .input-group select:focus {
     outline: none;
     border-color: var(--cor-secundaria);
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Sombra dourada */
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 .btn-block {
@@ -690,7 +631,6 @@ footer {
     padding: 1rem;
 }
 
-/* Informações e Mapa */
 .info-box p {
     margin-bottom: 1rem;
     color: #555;
@@ -703,7 +643,6 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Botão do Instagram */
 .btn-instagram {
     display: block;
     width: 100%;
@@ -724,19 +663,12 @@ footer {
     opacity: 0.85;
 }
 
-/* Responsividade do Contato */
 @media (max-width: 768px) {
     .contato-grid {
-        grid-template-columns: 1fr; /* Coloca uma coluna debaixo da outra no celular */
-        gap: 2rem;
+        grid-template-columns: 1fr;
     }
 }
 
-/* =========================================
-   PÁGINA DE APOIO (DOAÇÕES E DEPOIMENTOS)
-   ========================================= */
-
-/* Área de Doação / Campanha */
 .doacao-section {
     padding: 4rem 2rem;
     background-color: var(--cor-fundo);
@@ -784,7 +716,7 @@ footer {
 }
 
 .pix-area {
-    background-color: rgba(212, 175, 55, 0.1); /* Fundo dourado bem clarinho */
+    background-color: rgba(212, 175, 55, 0.1);
     padding: 2rem;
     border-radius: 8px;
     border: 2px dashed var(--cor-secundaria);
@@ -797,7 +729,7 @@ footer {
 }
 
 .btn-pix {
-    background-color: #32BCAD; /* Cor que remete a dinheiro/transferência, mas suave */
+    background-color: #32BCAD; 
     color: var(--cor-branco);
     border: none;
     padding: 1rem 2rem;
@@ -813,7 +745,6 @@ footer {
     background-color: #269185;
 }
 
-/* Área de Depoimentos */
 .depoimentos-section {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
@@ -867,7 +798,7 @@ footer {
     font-size: 1.05rem;
     line-height: 1.6;
     position: relative;
-    z-index: 1; /* Mantém o texto em cima das aspas */
+    z-index: 1;
 }
 
 .autor-depoimento strong {
@@ -891,24 +822,20 @@ footer {
     }
 }
 
-/* =========================================
-   RODAPÉ E CRÉDITOS
-   ========================================= */
 footer .creditos-dev {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: #999; /* Um cinza um pouco mais apagado para não ofuscar o texto principal */
+    color: #999;
 }
 
 footer .creditos-dev a {
-    color: var(--cor-secundaria); /* Usa o Dourado do clube no seu nome */
+    color: var(--cor-secundaria);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* O efeito ao passar o mouse por cima do seu nome */
 footer .creditos-dev a:hover {
-    color: var(--cor-branco); /* Fica branco e sublinhado ao passar o mouse */
+    color: var(--cor-branco);
     text-decoration: underline;
 }
