@@ -149,6 +149,7 @@ header {
     margin: 0; 
 }
 
+
 /* --- ALTERAÇÃO DAS CORES AQUI --- */
 .lista-eventos li:nth-child(odd) {
     background-color: var(--cor-branco);
@@ -156,13 +157,24 @@ header {
 
 .lista-eventos li:nth-child(even) {
     background-color: #EFEFEF;
-} /* <-- CHAVE DE FECHAMENTO ADICIONADA AQUI */
+}
 
 .galeria-preview {
     padding: 4rem 5%;
     text-align: center;
     background-color: var(--cor-branco);
     border-top: 5px solid var(--cor-secundaria);
+}
+
+.galeria-preview h2 {
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+}
+
+.galeria-preview p {
+    color: var(--cor-texto);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .preview-grid {
