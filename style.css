@@ -151,12 +151,19 @@ header {
 
 
 /* --- ALTERAÇÃO DAS CORES AQUI --- */
-.lista-eventos li:nth-child(odd) {
-    background-color: var(--cor-branco);
+lista-eventos {
+    list-style: none;
+    margin: 0 auto 2rem auto;
+    max-width: 550px; /* Aumentado de 400px para 550px para acompanhar os cards ao lado */
+    text-align: left;
 }
 
-.lista-eventos li:nth-child(even) {
-    background-color: #EFEFEF;
+.lista-eventos li {
+    padding: 1.2rem; /* Deixando o item um pouco mais "gordinho" */
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--cor-principal);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
 }
 
 .galeria-preview {
