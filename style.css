@@ -157,13 +157,20 @@ header {
 }
 
 .lista-eventos li {
-    background: var(--cor-branco);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     border-left: 4px solid var(--cor-principal);
     box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
 }
+
+/* --- ALTERAÇÃO DAS CORES AQUI --- */
+.lista-eventos li:nth-child(odd) {
+    background-color: var(--cor-branco);
+}
+
+.lista-eventos li:nth-child(even) {
+    background-color: #EFEFEF;
 
 .galeria-preview {
     padding: 4rem 5%;
